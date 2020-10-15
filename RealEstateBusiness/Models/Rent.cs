@@ -22,16 +22,22 @@ namespace RealEstateBusiness.Models
         public int Rooms { get; set; }
 
         [ForeignKey("Owner")]
+
+        [Display(Name = "RefOwnerNo")]
         public String OwnerRef { get; set; }
-        public virtual Staff RefOwnerNo { get; set; }
+        public virtual Owner Owner { get; set; }
 
         [ForeignKey("Staff")]
+
+        [Display(Name = "RefStaffNo")]
         public String StaffRef { get; set; }
-        public virtual Staff RefStaffNo { get; set; }
+        public virtual Staff Staff { get; set; }
 
         [ForeignKey("Branch")]
+
+        [Display(Name = "RefBranchNo")]
         public String BranchRef { get; set; }
-        public virtual Staff RefBranchNo { get; set; }
+        public virtual Branch Branch { get; set; }
 
 
     }

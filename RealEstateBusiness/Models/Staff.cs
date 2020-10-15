@@ -23,9 +23,13 @@ namespace RealEstateBusiness.Models
 
         public int Salary { get; set; }
 
+        public List<Rent> Rents { get; set; }
+
         [ForeignKey("Branch")]
+
+        [Display(Name = "Branch_BranchNo")]
         public String BranchRef { get; set; }
-        public virtual Branch Branch_BranchNo { get; set; }
+        public virtual Branch Branch { get; set; }
 
 
     }

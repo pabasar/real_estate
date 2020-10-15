@@ -20,5 +20,7 @@ namespace RealEstateBusiness.Models
         public int PostCode { get; set; }
 
         public List<Staff> Staffs { get; set; }
+
+        public List<Rent> Rents { get; set; }
     }
 }
