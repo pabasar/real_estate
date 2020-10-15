@@ -16,5 +16,7 @@ namespace RealEstateBusiness.Models
         public String City { get; set; }
 
         public int PostCode { get; set; }
+
+        public List<Staff> Staffs { get; set; }
     }
 }
