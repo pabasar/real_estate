@@ -7,6 +7,7 @@ using System.Web;
 
 namespace RealEstateBusiness.Models
 {
+    [Table("Owner_tbl")]
     public class Owner
     {
         [Key]

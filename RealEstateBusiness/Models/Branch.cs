@@ -7,6 +7,7 @@ using System.Web;
 
 namespace RealEstateBusiness.Models
 {
+    [Table("Branch_tbl")]
     public class Branch
     {
         [Key]
@@ -17,7 +18,7 @@ namespace RealEstateBusiness.Models
 
         public String City { get; set; }
 
-        public int PostCode { get; set; }
+        public String PostCode { get; set; }
 
         public List<Staff> Staffs { get; set; }
 

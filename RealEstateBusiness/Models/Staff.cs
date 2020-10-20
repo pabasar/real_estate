@@ -7,6 +7,7 @@ using System.Web;
 
 namespace RealEstateBusiness.Models
 {
+    [Table("Staff_tbl")]
     public class Staff
     {
         [Key]
@@ -19,6 +20,7 @@ namespace RealEstateBusiness.Models
 
         public String Position { get; set; }
 
+        [Column(TypeName ="Date")]
         public DateTime DOB { get; set; }
 
         public int Salary { get; set; }
@@ -27,7 +29,7 @@ namespace RealEstateBusiness.Models
 
         [ForeignKey("Branch")]
 
-        [Display(Name = "Branch_BranchNo")]
+        [Column("BranchNo")]
         public String BranchRef { get; set; }
         public virtual Branch Branch { get; set; }
 

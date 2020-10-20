@@ -7,6 +7,7 @@ using System.Web;
 
 namespace RealEstateBusiness.Models
 {
+    [Table("Rent_tbl")]
     public class Rent
     {
         [Key]
@@ -23,21 +24,23 @@ namespace RealEstateBusiness.Models
 
         [ForeignKey("Owner")]
 
-        [Display(Name = "RefOwnerNo")]
+        [Column("RefOwnerNo")]
         public String OwnerRef { get; set; }
         public virtual Owner Owner { get; set; }
 
         [ForeignKey("Staff")]
 
-        [Display(Name = "RefStaffNo")]
+        [Column("RefStaffNo")]
         public String StaffRef { get; set; }
         public virtual Staff Staff { get; set; }
 
         [ForeignKey("Branch")]
 
-        [Display(Name = "RefBranchNo")]
+        [Column("RefBranchNo")]
         public String BranchRef { get; set; }
         public virtual Branch Branch { get; set; }
+
+        public int Rent1 { get; set; }
 
 
     }
