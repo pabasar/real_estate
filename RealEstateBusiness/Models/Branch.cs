@@ -12,12 +12,14 @@ namespace RealEstateBusiness.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Branch Number")]
         public String BranchNo { get; set; }
 
         public String Street { get; set; }
 
         public String City { get; set; }
 
+        [Display(Name = "Post Code")]
         public String PostCode { get; set; }
 
         public List<Staff> Staffs { get; set; }

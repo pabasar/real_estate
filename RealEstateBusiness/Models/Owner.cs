@@ -12,14 +12,20 @@ namespace RealEstateBusiness.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Display(Name = "Owner Number")]
         public String OwnerNo { get; set; }
 
+        [Display(Name = "First Name")]
         public String FName { get; set; }
 
+        [Display(Name = "Last Name")]
         public String LName { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public String Address { get; set; }
 
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Telephone Number")]
         public String TelNo { get; set; }
 
         public List<Rent> Rents { get; set; }
