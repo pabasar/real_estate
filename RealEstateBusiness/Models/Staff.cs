@@ -13,7 +13,7 @@ namespace RealEstateBusiness.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Staff Number")]
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         public String StaffNo { get; set; }
 
         [Display(Name = "First Name")]

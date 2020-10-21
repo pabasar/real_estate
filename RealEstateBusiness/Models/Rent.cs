@@ -13,7 +13,7 @@ namespace RealEstateBusiness.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Property Number")]
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         public String PropertyNo { get; set; }
 
         public String Street { get; set; }

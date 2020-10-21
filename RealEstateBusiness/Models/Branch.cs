@@ -13,7 +13,7 @@ namespace RealEstateBusiness.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Branch Number")]
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         public String BranchNo { get; set; }
 
         public String Street { get; set; }
