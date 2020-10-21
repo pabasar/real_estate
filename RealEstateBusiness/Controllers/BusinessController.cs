@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RealEstateBusiness.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,30 +9,12 @@ namespace RealEstateBusiness.Controllers
 {
     public class BusinessController : Controller
     {
+        private BusinessContext businessContext = new BusinessContext();
         // GET: Business
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult CreateBranch()
-        {
-            return View();
-        }
-
-        public ActionResult CreateOwner()
-        {
-            return View();
-        }
-
-        public ActionResult CreateStaff()
-        {
-            return View();
-        }
-
-        public ActionResult CreateRent()
-        {
-            return View();
-        }
     }
 }
