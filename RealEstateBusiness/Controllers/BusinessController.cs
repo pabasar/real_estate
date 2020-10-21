@@ -18,5 +18,20 @@ namespace RealEstateBusiness.Controllers
         {
             return View();
         }
+
+        public ActionResult CreateOwner()
+        {
+            return View();
+        }
+
+        public ActionResult CreateStaff()
+        {
+            return View();
+        }
+
+        public ActionResult CreateRent()
+        {
+            return View();
+        }
     }
 }

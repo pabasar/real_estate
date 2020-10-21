@@ -13,6 +13,7 @@ namespace RealEstateBusiness.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Owner Number")]
+        [Required]
         public String OwnerNo { get; set; }
 
         [Display(Name = "First Name")]
