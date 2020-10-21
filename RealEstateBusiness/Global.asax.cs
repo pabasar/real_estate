@@ -13,6 +13,7 @@ namespace RealEstateBusiness
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
         }
     }
 }

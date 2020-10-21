@@ -41,6 +41,5 @@ namespace RealEstateBusiness.Models
         public String BranchRef { get; set; }
         public virtual Branch Branch { get; set; }
 
-
     }
 }

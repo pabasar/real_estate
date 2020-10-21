@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.WebPages.Html;
 
 namespace RealEstateBusiness.Models
 {
@@ -26,5 +27,7 @@ namespace RealEstateBusiness.Models
         public List<Staff> Staffs { get; set; }
 
         public List<Rent> Rents { get; set; }
+
+     
     }
 }
