@@ -1,0 +1,25 @@
+﻿@model List<RealEstateBusiness.Models.Branch>
+@using RealEstateBusiness.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Branch</title>
+</head>
+<body>
+    <div> 
+        <h1>Branch Names</h1>
+        @foreach (Branch branch in Model)
+        {
+            @Html.ActionLink(branch.BranchNo, "StaffInBranch", new { @BranchNo = branch.BranchNo })
+            <br />
+        }
+    </div>
+</body>
+</html>

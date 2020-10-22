@@ -182,11 +182,16 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Owner\Index.cshtml" />
     <Content Include="Views\Owner\Create.cshtml" />
-    <Content Include="Views\Branch\Index.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
     <Content Include="Views\Branch\Create.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Branches.cshtml" />
+    <Content Include="Views\Home\StaffNames.cshtml" />
+    <Content Include="Views\Home\Branch.cshtml" />
+    <Content Include="Views\Home\StaffInBranch.cshtml" />
+    <Content Include="Views\Home\StaffDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,9 +199,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010200437329_mgr1.resx">
       <DependentUpon>202010200437329_mgr1.cs</DependentUpon>
