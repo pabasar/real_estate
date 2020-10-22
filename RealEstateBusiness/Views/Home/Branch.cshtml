@@ -14,10 +14,11 @@
 </head>
 <body>
     <div> 
-        <h1>Branch Names</h1>
+        <h1>Branch Numbers</h1>
+        <h4>Click to view number of buildings managed by each branch</h4>
         @foreach (Branch branch in Model)
         {
-            @Html.ActionLink(branch.BranchNo, "StaffInBranch", new { @BranchNo = branch.BranchNo })
+            @Html.ActionLink(branch.BranchNo, "RentInBranch", new { @BranchNo = branch.BranchNo })
             <br />
         }
     </div>

@@ -53,6 +53,18 @@ namespace RealEstateBusiness.Controllers
             return View(staffs);
         }
 
+        public ActionResult RentInBranch(String BranchNo)
+        {
+            List<Rent> rents = businessContext.Rents.Where(x => x.BranchRef == BranchNo).ToList();
+            return View(rents);
+        }
+
+        public ActionResult Rent()
+        {
+            List<Rent> rents = businessContext.Rents.ToList();
+            return View(rents);
+        }
+
 
         public ActionResult Position()
         {

@@ -197,6 +197,7 @@
     <Content Include="Views\Home\StaffNamesPosition.cshtml" />
     <Content Include="Views\Home\StaffInPosition.cshtml" />
     <Content Include="Views\Home\Position.cshtml" />
+    <Content Include="Views\Home\RentInBranch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
