@@ -14,10 +14,11 @@
 </head>
 <body>
     <div>
-        <h1>Staffs in Branches</h1>
+        <h1>Staffs Names in Position</h1>
         @foreach (Staff staff in Model)
         {
-            @Html.ActionLink(staff.FName, "StaffDetails", new { @id = staff.StaffNo })
+            @staff.FName
+            @staff.LName
             <br />
         }
     </div>

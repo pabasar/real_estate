@@ -68,8 +68,8 @@ namespace RealEstateBusiness.Controllers
 
         public ActionResult Position()
         {
-            List<Branch> branches = businessContext.Branches.ToList();
-            return View(branches);
+            List<Staff> staffs = businessContext.Staffs.ToList();
+            return View(staffs);
         }
 
         public ActionResult StaffInPosition(String pos)

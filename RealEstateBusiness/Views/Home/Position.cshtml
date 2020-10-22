@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RealEstateBusiness.Models.Staff>
+﻿@model List<RealEstateBusiness.Models.Staff>
 @using RealEstateBusiness.Models;
 
 @{
@@ -14,10 +14,11 @@
 </head>
 <body>
     <div>
-
-        @foreach (var item in Model)
+        <h1>Staff Positions</h1>
+        <h4>Click to view staff names regarding to each position</h4>
+        @foreach (Staff staff in Model)
         {
-            @Html.ActionLink(item.Position, "StaffInPosition", new { @pos = item.Position })
+            @Html.ActionLink(staff.Position, "StaffInPosition", new { @pos = staff.Position })
             <br />
         }
     </div>
