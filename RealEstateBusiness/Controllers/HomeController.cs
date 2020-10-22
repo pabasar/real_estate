@@ -13,6 +13,11 @@ namespace RealEstateBusiness.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult Staffs()
+        {
             List<Staff> Staffs = businessContext.Staffs.ToList();
             return View(Staffs);
         }
@@ -45,6 +50,19 @@ namespace RealEstateBusiness.Controllers
         public ActionResult StaffInBranch(String BranchNo)
         {
             List<Staff> staffs = businessContext.Staffs.Where(x => x.BranchRef == BranchNo).ToList();
+            return View(staffs);
+        }
+
+
+        public ActionResult Position()
+        {
+            List<Branch> branches = businessContext.Branches.ToList();
+            return View(branches);
+        }
+
+        public ActionResult StaffInPosition(String pos)
+        {
+            List<Staff> staffs = businessContext.Staffs.Where(x => x.Position == pos).ToList();
             return View(staffs);
         }
     }

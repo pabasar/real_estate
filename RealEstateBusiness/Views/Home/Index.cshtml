@@ -1,5 +1,4 @@
-﻿@model List<RealEstateBusiness.Models.Staff>
-@using RealEstateBusiness.Models;
+﻿@using RealEstateBusiness.Models;
 
 @{
     Layout = null;
@@ -14,31 +13,11 @@
 </head>
 <body>
     <div> 
-        <h1>Staff Detail</h1>
-        <table border="1">
-            <tr>
-                <td>Staff Number</td>
-                <td>First Name</td>
-                <td>Last Name</td>
-                <td>Position</td>
-                <td>Date of Birth</td>
-                <td>Salary</td>
-                <td>Branch</td>
-            </tr>
-            @foreach (Staff staff in Model)
-            {
-                <tr>
-                    <td>@staff.StaffNo</td>
-                    <td>@staff.FName</td>
-                    <td>@staff.LName</td>
-                    <td>@staff.Position</td>
-                    <td>@staff.DOB</td>
-                    <td>@staff.Salary</td>
-                    <td>@staff.Branch.BranchNo</td>
-                </tr>
-            }
-
-        </table>
+        <h1>Real Estate Business</h1>
+        @Html.ActionLink("Branch", "Index", "Branch")
+        @Html.ActionLink("Owner", "Index", "Owner")
+        @Html.ActionLink("Staff", "Index", "Staff")
+        @Html.ActionLink("Rent", "Index", "Rent")
     </div>
 </body>
 </html>

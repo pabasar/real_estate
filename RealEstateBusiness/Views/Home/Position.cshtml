@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RealEstateBusiness.Models.Staff>
+@using RealEstateBusiness.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Position</title>
+</head>
+<body>
+    <div>
+
+        @foreach (var item in Model)
+        {
+            @Html.ActionLink(item.Position, "StaffInPosition", new { @pos = item.Position })
+            <br />
+        }
+    </div>
+
+</body>
+</html>

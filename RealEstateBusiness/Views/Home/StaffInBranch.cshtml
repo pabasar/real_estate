@@ -14,7 +14,7 @@
 </head>
 <body>
     <div> 
-        <h1>Staffs in __________</h1>
+        <h1>Staffs in Branches</h1>
         @foreach (Staff staff in Model)
         {
             @Html.ActionLink(staff.FName, "StaffDetails", new { @id = staff.StaffNo })

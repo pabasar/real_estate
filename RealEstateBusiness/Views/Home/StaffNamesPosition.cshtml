@@ -1,0 +1,25 @@
+﻿@model List<RealEstateBusiness.Models.Staff>
+@using RealEstateBusiness.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StaffNames</title>
+</head>
+<body>
+    <div>
+        <h1>Filter Staffs based on Positions</h1>
+        @foreach (Staff staff in Model)
+        {
+            @Html.ActionLink(staff.FName, "StaffPosition", new { @pos = staff.Position })
+            <br />
+        }
+    </div>
+</body>
+</html>
