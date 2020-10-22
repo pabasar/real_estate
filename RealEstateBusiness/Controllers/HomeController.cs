@@ -16,31 +16,6 @@ namespace RealEstateBusiness.Controllers
             return View();
         }
 
-        public ActionResult Staffs()
-        {
-            List<Staff> Staffs = businessContext.Staffs.ToList();
-            return View(Staffs);
-        }
-
-        public ActionResult Branches()
-        {
-            List<Branch> AllBranches = businessContext.Branches.ToList();
-            return View(AllBranches);
-        }
-
-        public ActionResult StaffNames()
-        {
-            List<Staff> StaffName = businessContext.Staffs.ToList();
-            return View(StaffName);
-        }
-
-        public ActionResult StaffDetails(String id)
-        {
-            Staff staff = businessContext.Staffs
-                .SingleOrDefault(x => x.StaffNo == id);
-            return View(staff);
-        }
-
         public ActionResult Branch()
         {
             List<Branch> branches = businessContext.Branches.ToList();
@@ -76,6 +51,18 @@ namespace RealEstateBusiness.Controllers
         {
             List<Staff> staffs = businessContext.Staffs.Where(x => x.Position == pos).ToList();
             return View(staffs);
+        }
+
+        public ActionResult City()
+        {
+            List<Rent> rents = businessContext.Rents.ToList();
+            return View(rents);
+        }
+
+        public ActionResult RentInCity(String city)
+        {
+            List<Rent> rents = businessContext.Rents.Where(x => x.City == city).ToList();
+            return View(rents);
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿@model List<RealEstateBusiness.Models.Rent>
+@using RealEstateBusiness.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Position</title>
+</head>
+<body>
+    <div>
+        <h1>City</h1>
+        <h4>Click to view buildings regarding to each City</h4>
+        @foreach (Rent rent in Model)
+        {
+            @Html.ActionLink(rent.City, "RentInCity", new { @city = rent.City })
+            <br />
+        }
+    </div>
+
+</body>
+</html>

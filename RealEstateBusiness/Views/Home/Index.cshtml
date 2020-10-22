@@ -14,10 +14,21 @@
 <body>
     <div> 
         <h1>Real Estate Business</h1>
+        <p>
+        CRUD Operations <br>
         @Html.ActionLink("Branch", "Index", "Branch")
         @Html.ActionLink("Owner", "Index", "Owner")
         @Html.ActionLink("Staff", "Index", "Staff")
         @Html.ActionLink("Rent", "Index", "Rent")
+        </p>
+        <p>
+        Others
+        @Html.ActionLink("Filter the staff based on their position", "Position")
+        <br>
+        @Html.ActionLink("Number of buildings managed by each branch", "Branch")
+        <br>
+        @Html.ActionLink("Filter the buildings by city", "City")
+        </p>
     </div>
 </body>
 </html>

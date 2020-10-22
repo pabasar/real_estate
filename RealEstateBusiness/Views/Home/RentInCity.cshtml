@@ -1,0 +1,25 @@
+﻿@model List<RealEstateBusiness.Models.Rent>
+@using RealEstateBusiness.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RentInCity</title>
+</head>
+<body>
+    <div>
+        <h1>Buildings in City</h1>
+        @foreach (Rent rent in Model)
+        {
+            @rent.PropertyNo
+            <br />
+        }
+    </div>
+</body>
+</html>
