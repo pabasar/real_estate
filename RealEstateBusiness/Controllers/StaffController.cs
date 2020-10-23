@@ -19,6 +19,7 @@ namespace RealEstateBusiness.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.BranchDetails = businessContext.Branches;
             return View();
         }
 

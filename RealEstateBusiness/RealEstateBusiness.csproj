@@ -194,6 +194,7 @@
     <Content Include="Views\Home\Position.cshtml" />
     <Content Include="Views\Home\City.cshtml" />
     <Content Include="Views\Home\RentInCity.cshtml" />
+    <Content Include="Views\Staff\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
