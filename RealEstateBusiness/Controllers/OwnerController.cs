@@ -58,5 +58,20 @@ namespace RealEstateBusiness.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(String id)
+        {
+            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            return View(owner);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteOwner(String id)
+        {
+            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            businessContext.Owners.Remove(owner);
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

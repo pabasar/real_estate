@@ -63,5 +63,20 @@ namespace RealEstateBusiness.Controllers
             businessContext.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(String id)
+        {
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteStaff(String id)
+        {
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            businessContext.Staffs.Remove(staff);
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
