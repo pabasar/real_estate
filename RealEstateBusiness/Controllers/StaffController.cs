@@ -44,7 +44,7 @@ namespace RealEstateBusiness.Controllers
 
         public ActionResult Edit(String id)
         {
-            ViewBag.BranchDetails = new SelectList(businessContext.Branches, "BranchNo", "BranchNo");
+            ViewBag.BranchDetails = new SelectList(businessContext.Branches, "BranchNo", "BranchNo", "BranchRef");
             Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(staff);
         }
