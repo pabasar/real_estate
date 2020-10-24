@@ -195,6 +195,10 @@
     <Content Include="Views\Home\RentInCity.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Rent\Create.cshtml" />
+    <Content Include="Views\Branch\Details.cshtml" />
+    <Content Include="Views\Owner\Details.cshtml" />
+    <Content Include="Views\Rent\Details.cshtml" />
+    <Content Include="Views\Staff\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

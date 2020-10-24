@@ -33,5 +33,11 @@ namespace RealEstateBusiness.Controllers
             }
             return View();
         }
+
+        public ActionResult Details(String id)
+        {
+            Branch branch = businessContext.Branches.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
     }
 }

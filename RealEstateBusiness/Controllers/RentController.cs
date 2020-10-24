@@ -30,12 +30,21 @@ namespace RealEstateBusiness.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewBag.BranchDetails = businessContext.Branches;
+                ViewBag.StaffDetails = businessContext.Staffs;
+                ViewBag.OwnerDetails = businessContext.Owners;
                 businessContext.Rents.Add(rent);
                 businessContext.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View();
+        }
+
+        public ActionResult Details(String id)
+        {
+            Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            return View(rent);
         }
     }
 }

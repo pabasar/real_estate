@@ -28,11 +28,18 @@ namespace RealEstateBusiness.Controllers
         {
             if (ModelState.IsValid)
             {
+                ViewBag.BranchDetails = businessContext.Branches;
                 businessContext.Staffs.Add(staff);
                 businessContext.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        public ActionResult Details(String id)
+        {
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
         }
     }
 }

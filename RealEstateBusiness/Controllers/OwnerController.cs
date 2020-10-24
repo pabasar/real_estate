@@ -33,5 +33,11 @@ namespace RealEstateBusiness.Controllers
             }
             return View();
         }
+
+        public ActionResult Details(String id)
+        {
+            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            return View(owner);
+        }
     }
 }
