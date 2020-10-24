@@ -47,9 +47,15 @@ namespace RealEstateBusiness.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Branch updatedBranch)
         {
-            return View();
+            Branch branch = businessContext.Branches.SingleOrDefault(x => x.BranchNo == id);
+            branch.BranchNo = updatedBranch.BranchNo;
+            branch.Street = updatedBranch.Street;
+            branch.City = updatedBranch.City;
+            branch.PostCode = updatedBranch.PostCode;
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

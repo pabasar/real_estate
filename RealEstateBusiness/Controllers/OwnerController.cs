@@ -47,9 +47,16 @@ namespace RealEstateBusiness.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Owner updatedOwner)
         {
-            return View();
+            Owner owner = businessContext.Owners.SingleOrDefault(x => x.OwnerNo == id);
+            owner.OwnerNo = updatedOwner.OwnerNo;
+            owner.FName = updatedOwner.FName;
+            owner.LName = updatedOwner.LName;
+            owner.Address = updatedOwner.Address;
+            owner.TelNo = updatedOwner.TelNo;
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

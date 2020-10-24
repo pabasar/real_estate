@@ -57,9 +57,20 @@ namespace RealEstateBusiness.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Rent updatedRent)
         {
-            return View();
+            Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            rent.PropertyNo = updatedRent.PropertyNo;
+            rent.Street = updatedRent.Street;
+            rent.City = updatedRent.City;
+            rent.PType = updatedRent.PType;
+            rent.Rooms = updatedRent.Rooms;
+            rent.OwnerRef = updatedRent.OwnerRef;
+            rent.StaffRef = updatedRent.StaffRef;
+            rent.BranchRef = updatedRent.BranchRef;
+            rent.Rent1 = updatedRent.Rent1;
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

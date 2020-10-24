@@ -50,9 +50,18 @@ namespace RealEstateBusiness.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Staff updatedStaff)
         {
-            return View();
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            staff.StaffNo = updatedStaff.StaffNo;
+            staff.FName = updatedStaff.FName;
+            staff.LName = updatedStaff.LName;
+            staff.Position = updatedStaff.Position;
+            staff.DOB = updatedStaff.DOB;
+            staff.Salary = updatedStaff.Salary;
+            staff.BranchRef = updatedStaff.BranchRef;
+            businessContext.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
