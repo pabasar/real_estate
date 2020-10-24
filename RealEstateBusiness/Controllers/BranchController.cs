@@ -39,5 +39,17 @@ namespace RealEstateBusiness.Controllers
             Branch branch = businessContext.Branches.SingleOrDefault(x => x.BranchNo == id);
             return View(branch);
         }
+
+        public ActionResult Edit(String id)
+        {
+            Branch branch = businessContext.Branches.SingleOrDefault(x => x.BranchNo == id);
+            return View(branch);
+        }
+
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }

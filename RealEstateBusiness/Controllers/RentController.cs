@@ -46,5 +46,20 @@ namespace RealEstateBusiness.Controllers
             Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
             return View(rent);
         }
+
+        public ActionResult Edit(String id)
+        {
+            ViewBag.BranchDetails = new SelectList(businessContext.Branches, "BranchNo", "BranchNo");
+            ViewBag.StaffDetails = new SelectList(businessContext.Staffs, "StaffNo", "FName");
+            ViewBag.OwnerDetails = new SelectList(businessContext.Owners, "OwnerNo", "FName");
+            Rent rent = businessContext.Rents.SingleOrDefault(x => x.PropertyNo == id);
+            return View(rent);
+        }
+
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }

@@ -41,5 +41,18 @@ namespace RealEstateBusiness.Controllers
             Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(staff);
         }
+
+        public ActionResult Edit(String id)
+        {
+            ViewBag.BranchDetails = new SelectList(businessContext.Branches, "BranchNo", "BranchNo");
+            Staff staff = businessContext.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(staff);
+        }
+
+        [HttpPost]
+        public ActionResult Edit()
+        {
+            return View();
+        }
     }
 }
